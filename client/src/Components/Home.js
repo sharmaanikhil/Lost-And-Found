@@ -4,37 +4,35 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from 'framer-motion'
 
-// import image from "../img/earth.svg";
 
 const Home = () => {
   
-  const isLoggedIn = JSON.parse(window.localStorage.getItem('user'))
-  ; // Replace with your own authentication logic
+  const isLoggedIn = JSON.parse(window.localStorage.getItem('user')); 
 
   const handleButtonClick = () => {
     if (isLoggedIn) {
-      // If the user is logged in, go to /feed
+      
       window.location.href = "/postitem";
     } else {
-      // If the user is not logged in, go to /log-in
+      
       window.location.href = "/log-in";
     }
   };
   const handleButtonClickLost = () => {
     if (isLoggedIn) {
-      // If the user is logged in, go to /feed
+      
       window.location.href = "/lostItems";
     } else {
-      // If the user is not logged in, go to /log-in
+      
       window.location.href = "/log-in";
     }
   };
   const handleButtonClickFound = () => {
     if (isLoggedIn) {
-      // If the user is logged in, go to /feed
+     
       window.location.href = "/founditems";
     } else {
-      // If the user is not logged in, go to /log-in
+      
       window.location.href = "/log-in";
     }
   };
